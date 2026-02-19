@@ -4,7 +4,7 @@ const { DataTypes } = require('sequelize');
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.addColumn('users', 'password', {
+    await queryInterface.addColumn('Users', 'password', {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: 'parshwa@10',
@@ -12,6 +12,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.removeColumn('users', 'password');
+    await queryInterface.removeColumn('Users', 'password');
   },
 };
